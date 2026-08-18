@@ -1,0 +1,26 @@
+:root{
+    --cor-fundo:#F8F8FF;
+    --cor-principal:#f8f8ff;
+--cor-secundaria:#f8f8ff;
+--cor-destaque:#f8f8ff;
+--cor-texto:#f8f8ff;
+}
+body{
+    background-color:var(--cor-fundo);
+}
+.caixa-principal{
+    background-color: var(--cor-fundo);
+    color:var(--cor-texto);
+    display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+}
+button{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto)#f8f8ff;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
