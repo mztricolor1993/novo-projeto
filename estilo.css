@@ -1,5 +1,5 @@
 body {
-    background-color: #121212;
+    background-color: #1b1b1b;
     color: #ffffff;
     font-family: Arial, sans-serif;
     display: flex;
@@ -10,53 +10,38 @@ body {
 }
 
 .caixa-principal {
-    background-color: #1e1e1e;
+    background-color: #2d2d2d;
     width: 90%;
     max-width: 600px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     text-align: center;
 }
 
-h1 {
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
 .caixa-perguntas {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
-    line-height: 1.4;
 }
 
-.caixa-alternativas {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-button {
-    background-color: #2e7d32;
+.caixa-alternativas button {
+    background-color: #4a90e2;
     color: white;
     border: none;
-    padding: 12px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    width: 100%;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.2s;
 }
 
-button:hover {
-    background-color: #4caf50;
+.caixa-alternativas button:hover {
+    background-color: #357abd;
 }
 
 .caixa-resultado {
-    display: none;
-}
-
-.texto-resultado {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #df1f1f;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #3b3b3b;
+    border-radius: 5px;
 }
