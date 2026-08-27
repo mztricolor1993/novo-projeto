@@ -1,112 +1,67 @@
-const caixaPerguntas = document.querySelector(".caixa-perguntas");
-const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const caixaResultado = document.querySelector(".caixa-resultado");
-const textoResultado = document.querySelector(".texto-resultado");
-
 const perguntas = [
     {
-        enunciado: "Você descobre uma nova ferramenta de Inteligência Artificial capaz de responder dúvidas, gerar textos e resolver tarefas complexas em segundos. Qual é sua primeira atitude?",
+        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
         alternativas: [
             {
-                texto: "Exploro a ferramenta imediatamente para entender como ela pode facilitar minha rotina de estudos e trabalho.",
-                afirmacao: "Demonstrou curiosidade inicial e abertura para integrar novas tecnologias ao seu cotidiano."
+                texto: "Isso é assustador!",
+                afirmacao: "No início ficou com medo do que essa tecnologia pode fazer. "
             },
             {
-                texto: "Sinto receio sobre como essas automações podem impactar empregos e a privacidade de dados.",
-                afirmacao: "Manteve um olhar crítico e cauteloso quanto aos impactos sociais e éticos da tecnologia."
+                texto: "Isso é maravilhoso!",
+                afirmacao: "Quis saber como usar IA no seu dia a dia."
             }
         ]
     },
     {
-        enunciado: "Sua escola ou empresa propõe um projeto importante sobre inovação. Como você decide utilizar a IA na preparação?",
+        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
         alternativas: [
             {
-                texto: "Uso a IA como um assistente de brainstorming para gerar ideias, mas reviso e escrevo o conteúdo final por conta própria.",
-                afirmacao: "Adotou a IA de forma colaborativa, preservando seu pensamento crítico e autoria."
+                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
+                afirmacao: "Conseguiu utilizar a IA para buscar informações úteis."
             },
             {
-                texto: "Prefiro realizar toda a pesquisa em fontes tradicionais, sem utilizar geradores automáticos de texto.",
-                afirmacao: "Valorizou métodos convencionais de pesquisa e o desenvolvimento 100% autoral do conhecimento."
+                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+                afirmacao: "Sentiu mais facilidade em utilizar seus próprios recursos para escrever seu trabalho."
             }
         ]
     },
     {
-        enunciado: "Chegou o momento de criar os elementos visuais da sua apresentação. Qual estratégia você escolhe?",
+        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
         alternativas: [
             {
-                texto: "Utilizo um gerador de imagens por IA para criar ilustrações personalizadas em poucos minutos.",
-                afirmacao: "Aproveitou o potencial das ferramentas gerativas para otimizar o tempo e a produção visual."
+                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
+                afirmacao: "Vem impulsionando a inovação na área de IA e luta para abrir novos caminhos profissionais com IA."
             },
             {
-                texto: "Crio os visuais manualmente ou utilizando softwares de edição tradicionais para ter controle total do design.",
-                afirmacao: "Priorizou o processo criativo artesanal e o domínio de ferramentas de design."
+                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
+                afirmacao: "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização de IA de forma ética."
             }
         ]
     },
     {
-        enunciado: "Em um debate sobre direitos autorais e artes geradas por IA, qual posicionamento mais se alinha ao seu pensamento?",
+        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
         alternativas: [
             {
-                texto: "Defendo que a IA é apenas uma nova ferramenta artística, assim como a fotografia foi no passado.",
-                afirmacao: "Enxerga a tecnologia como uma evolução natural dos instrumentos de expressão humana."
+                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
+                afirmacao: "Notou também que muitas pessoas não sabem ainda utilizar as ferramentas tradicionais e decidiu compartilhar seus conhecimentos de design utilizando ferramentas de pintura digital para iniciantes."
             },
             {
-                texto: "Acredito que as artes de IA devem ter regulamentação rígida para proteger o trabalho dos artistas humanos.",
-                afirmacao: "Defende a proteção do trabalho autoral humano frente ao avanço dos algoritmos."
+                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
+                afirmacao: "Acelerou o processo de criação de trabalhos utilizando geradores de imagem e agora consegue ensinar pessoas que sentem dificuldades em desenhar manualmente como utilizar também!"
             }
         ]
     },
     {
-        enunciado: "Olhando para os próximos anos, como você enxerga a relação entre humanos e IA?",
+        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
         alternativas: [
             {
-                texto: "Acredito na coexistência: a IA cuidará de tarefas repetitivas enquanto os humanos focam em empatia e criatividade.",
-                afirmacao: "Projecta um futuro de cooperação onde a IA potencializa as capacidades humanas regionais e globais."
+                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
+                afirmacao: "Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."
             },
             {
-                texto: "Acho necessário desacelerar o desenvolvimento até entendermos completamente as consequências de longo prazo.",
-                afirmacao: "Aposta na prudência e no estabelecimento de limites éticos claros antes da expansão desmedida."
+                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
+                afirmacao: "Percebeu que toda IA reproduz orientações baseadas na empresa que programou e muito do que o chat escrevia não refletia o que pensava e por isso sabe que os textos gerados pela IA devem servir como auxílio e não resultado final. "
             }
         ]
-    }
-]; // O fechamento da lista foi adicionado aqui
-
-let atual = 0;
-let perguntaAtual;
-let historiaFinal = "";
-
-function mostraPergunta() {
-    if (atual >= perguntas.length) {
-        mostraResultado();
-        return;
-    }
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
-    mostraAlternativas();
-}
-
-function mostraAlternativas() {
-    for (const alternativa of perguntaAtual.alternativas) {
-        const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
-        caixaAlternativas.appendChild(botaoAlternativas);
-    }
-}
-
-function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal += afirmacoes + " ";
-    atual++;
-    mostraPergunta();
-}
-
-function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2026, seu perfil sobre IA é...";
-    caixaAlternativas.textContent = "";
-    textoResultado.textContent = historiaFinal;
-    caixaResultado.classList.add("mostrar");
-}
-
-mostraPergunta();
+    },
+];
